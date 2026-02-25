@@ -1,0 +1,18 @@
+Die technische Funktionsweise (Hinter den Kulissen)
+Der Befehl msg nutzt eine Technologie namens RPC (Remote Procedure Call). Man kann sich das wie ein internes Rohrpost-System von Windows vorstellen.
+
+1. Der Verbindungsaufbau
+Wenn Sie den Befehl abschicken, kontaktiert Ihr Computer den Ziel-PC über das Netzwerk. Er klopft an einen bestimmten "Port" (meistens Port 445 oder dynamische Ports über 1024). Ihr Rechner sagt: "Ich habe hier ein Paket für den Nachrichtendienst."
+
+2. Die Identifizierung
+Der Ziel-PC prüft, ob er den Befehl annehmen darf. Da Sie kein Admin sind, schaut der Ziel-PC:
+
+Ist der Nachrichtendienst (Session Manager) aktiv?
+
+Erlaubt die Firewall diesen speziellen "Anruf"?
+
+3. Die Zustellung
+Wenn die Erlaubnis erteilt wird, übergibt der Befehl den Text an den Windows Session Manager. Dieser weiß genau, welcher Benutzer gerade vor dem Monitor sitzt. Er erzeugt dann ein kleines Systemfenster (eine sogenannte Message Box) direkt in der grafischen Benutzeroberfläche des Empfängers.
+
+4. Die Quittierung
+Sobald das Fenster auf dem Ziel-PC erscheint, meldet dieser an Ihre CMD zurück: "Zustellung erfolgreich." Wenn der Empfänger auf "OK" klickt oder die Zeit abläuft, wird der Prozess im Speicher wieder gelöscht.
