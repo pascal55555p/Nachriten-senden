@@ -1,1 +1,22 @@
 msg * /server:192.168.1.1 /time:30 "Ihre Nachricht hier"
+msg [Ziel-Name] [Deine Nachricht]
+
+Code 1: Den Namen des Ziel-Laptops herausfinden
+(Am Laptop des Empfängers eingeben)
+whoami
+
+Code 2: Die Verbindung zum Ziel-Laptop testen
+(An deinem eigenen Laptop eingeben)
+ping COMPUTERNAME
+
+Code 3: Die Nachricht an einen bestimmten Laptop senden
+(An deinem eigenen Laptop eingeben)
+msg BENUTZERNAME Deine Nachricht hier
+
+Code 4: Die Nachricht an ALLE Laptops im Netzwerk senden
+(An deinem eigenen Laptop eingeben)
+msg * Hallo an alle!
+
+Code 5: Testen, ob Nachrichten erlaubt sind
+(Falls es nicht funktioniert)
+query termserver
