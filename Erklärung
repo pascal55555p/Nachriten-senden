@@ -1,18 +1,22 @@
-Die technische Funktionsweise (Hinter den Kulissen)
-Der Befehl msg nutzt eine Technologie namens RPC (Remote Procedure Call). Man kann sich das wie ein internes Rohrpost-System von Windows vorstellen.
+Guten Tag, Boss! Hier ist die kinderleichte Erklärung für deinen Vortrag. Ich habe sie so geschrieben, dass sie jeder in der 4. Klasse sofort versteht.
 
-1. Der Verbindungsaufbau
-Wenn Sie den Befehl abschicken, kontaktiert Ihr Computer den Ziel-PC über das Netzwerk. Er klopft an einen bestimmten "Port" (meistens Port 445 oder dynamische Ports über 1024). Ihr Rechner sagt: "Ich habe hier ein Paket für den Nachrichtendienst."
+Hallo zusammen!
+Heute zeige ich euch, wie man mit einem geheimen Computer-Trick Nachrichten von einem Laptop zum anderen schickt – ganz ohne WhatsApp oder E-Mail. Wir benutzen dazu die CMD. Das ist ein schwarzes Fenster, in dem man dem Computer direkte Befehle gibt.
 
-2. Die Identifizierung
-Der Ziel-PC prüft, ob er den Befehl annehmen darf. Da Sie kein Admin sind, schaut der Ziel-PC:
+So schickt ihr eine Nachricht:
 
-Ist der Nachrichtendienst (Session Manager) aktiv?
+Das Programm starten: Drückt die Windows-Taste und R, tippt cmd ein und drückt Enter. Jetzt seid ihr in der Kommandozentrale.
 
-Erlaubt die Firewall diesen speziellen "Anruf"?
+Den Namen finden: Ihr müsst wissen, wie der andere Computer heißt. Geht kurz zum Freund und tippt dort whoami ein. Das ist Englisch für „Wer bin ich?“. Der Computer verrät euch dann seinen Namen.
 
-3. Die Zustellung
-Wenn die Erlaubnis erteilt wird, übergibt der Befehl den Text an den Windows Session Manager. Dieser weiß genau, welcher Benutzer gerade vor dem Monitor sitzt. Er erzeugt dann ein kleines Systemfenster (eine sogenannte Message Box) direkt in der grafischen Benutzeroberfläche des Empfängers.
+Die Nachricht abschicken: Geht zurück an euren Laptop und tippt diesen Code ein:
 
-4. Die Quittierung
-Sobald das Fenster auf dem Ziel-PC erscheint, meldet dieser an Ihre CMD zurück: "Zustellung erfolgreich." Wenn der Empfänger auf "OK" klickt oder die Zeit abläuft, wird der Prozess im Speicher wieder gelöscht.
+msg [Name von eurem Freund] Hallo, alles klar?
+
+Absenden: Drückt die Enter-Taste (die große Taste mit dem Knick-Pfeil).
+
+Was passiert dann?
+Bäm! Beim anderen Laptop taucht mitten auf dem Bildschirm ein kleines graues Fenster mit eurer Nachricht auf. Er muss auf „OK“ klicken, damit es wieder verschwindet.
+
+Aber Achtung:
+In vielen Schulen haben die Lehrer ein digitales Schloss eingebaut. Wenn der Befehl nicht funktioniert, ist das Schloss zu stark. Aber jetzt wisst ihr genau, wie die Profis es machen würden!
